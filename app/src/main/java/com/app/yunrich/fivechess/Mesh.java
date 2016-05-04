@@ -10,8 +10,8 @@ import java.util.ArrayList;
  */
 public class Mesh {
     ArrayList<ArrayList<Integer>>  mesh = new ArrayList<ArrayList<Integer>>();
-    int width = 6;
-    int height = 10;
+    int width = 9;
+    int height = 13;
 
     public Mesh(){
         init();

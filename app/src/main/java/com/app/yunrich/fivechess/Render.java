@@ -52,21 +52,21 @@ public class Render extends View {
         if (mesh == null)
             return;
 
-        int pad = 100;
+        int pad = 80;
         int padx = (getWidth() - (mesh.width - 1) * pad) / 2;
         int pady = (getHeight() - (mesh.height - 1) * pad) / 2;
 
         //hang
         float startx = padx, endx = padx + (mesh.width - 1) * pad;
         for (int index = 0; index < mesh.height; index++) {
-            float y = padx + pad * index;
+            float y = pady + pad * index;
             canvas.drawLine(startx, y, endx, y, paint);
         }
 
         //lie
         float starty = pady, endy = pady + (mesh.height - 1) * pad;
         for (int index = 0; index < mesh.width; index++) {
-            float x = pady + pad * index;
+            float x = padx + pad * index;
             canvas.drawLine(x, starty, x, endy, paint);
         }
 
@@ -94,7 +94,7 @@ public class Render extends View {
     protected Point getPoint(float x, float y) {
         Point point = null;
 
-        int pad = 100;
+        int pad = 80;
         int padx = (getWidth() - (mesh.width - 1) * pad) / 2;
         int pady = (getHeight() - (mesh.height - 1) * pad) / 2;
 
